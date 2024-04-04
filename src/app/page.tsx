@@ -10,7 +10,6 @@ import {
   useMakeCopilotReadable,
 } from "@copilotkit/react-core";
 import { CopilotSidebar } from "@copilotkit/react-ui";
-import { SPREADSHEET_PARAMS } from "./parameters";
 import { INSTRUCTIONS } from "./instructions";
 
 const HomePage = () => {
