@@ -4,7 +4,11 @@ import "@copilotkit/react-ui/styles.css";
 import React, { useState } from "react";
 import Sidebar from "./components/Sidebar";
 import MainArea from "./components/MainArea";
-import { CopilotKit, useCopilotAction } from "@copilotkit/react-core";
+import {
+  CopilotKit,
+  useCopilotAction,
+  useMakeCopilotReadable,
+} from "@copilotkit/react-core";
 import { CopilotSidebar } from "@copilotkit/react-ui";
 import { SPREADSHEET_PARAMS } from "./parameters";
 import { INSTRUCTIONS } from "./instructions";
@@ -88,6 +92,8 @@ const Main = () => {
       setSelectedSpreadsheetIndex(spreadsheets.length);
     },
   });
+
+  useMakeCopilotReadable("Todays date is: " + new Date().toLocaleDateString());
 
   return (
     <div className="flex">
